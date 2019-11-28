@@ -1,2 +1,2 @@
-# CORENup-A-Combination-of-Convolutional-andRecurrent-Deep-Neural-Networks-for-NucleosomePositioning-
+# CORENup
 A Combination of Convolutional andRecurrent Deep Neural Networks for NucleosomePositioning Identification
