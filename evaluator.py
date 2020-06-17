@@ -2,9 +2,32 @@ import numpy as np
 import tensorflow as tf
 import tensorflow.keras.backend as K
 from sklearn.metrics import roc_auc_score
+from sklearn.model_selection import StratifiedKFold
+
+def build_kfold(dataset, labels, k=10, shuffle=False, seed=None):
+    
+    skf = StratifiedKFold(n_splits=k, shuffle=shuffle, random_state=seed)
+    kfoldList = []
+    for train_index, test_index in skf.split(dataset, labels):
+        X_train, X_test = dataset[train_index], dataset[test_index]
+        y_train, y_test = labels[train_index], labels[test_index]
+        kfoldList.append({
+            "X_train": X_train,
+            "X_test": X_test,
+            "y_train":y_train,
+            "y_test":y_test
+        })
+    return kfoldList
+    
+def pred2label(y_pred):
+    y_pred = np.round(np.clip(y_pred, 0, 1))
+
+    return y_pred
 
 def precision(y_true, y_pred):
     print(y_pred)
+    #y_pred = tf.convert_to_tensor(y_pred, np.float32)
+    #y_true = tf.convert_to_tensor(y_true, np.float32)
     y_pred_pos = K.round(K.clip(y_pred, 0, 1))
     y_pred_neg = 1 - y_pred_pos
 
