@@ -27,15 +27,15 @@ def hot_encode(sequence):
 
 parser = argparse.ArgumentParser(description='Generating Pickle encoded File from Fasta')
 parser.add_argument('-p','--path', dest='path', type=str, default="/home/amato/Scrivania/CORENup/Datasets/Setting2/Yeast/fasta",
-                    help='Fasta Files Path')
+                    help='Fasta File Path')
 parser.add_argument('-f','--fas', dest='fasName', type=str, default="nucleosomes_vs_linkers_yeast_wg.fas",
-                    help='Fasta file Name')
+                    help='Fasta filename')
 parser.add_argument('-o','--out', dest='outDir', type=str, default="/home/amato/Scrivania/CORENup/Datasets/Setting2/Yeast/pickle",
                     help='Output file Path')
 parser.add_argument('-n','--nuc', dest='nucPickle', type=str, default="nuc_Yeast_wg.pickle",
-                    help='Output file Path')
+                    help='Output Nucleosome filename')
 parser.add_argument('-l','--lin', dest='linkPickle', type=str, default="link_Yeast_wg.pickle",
-                    help='Output file Path')
+                    help='Output Linker filename')
 
 args = parser.parse_args()
 inPath = args.path
