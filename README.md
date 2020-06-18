@@ -18,13 +18,13 @@ bed2fas.py [-h] [-p PATH] [-n NUCBED] [-l LINBED] [-fd FASDIR]
 
 Arguments:
 
-  -h, --help            show this help message and exit
-  -p PATH, --path PATH  Bed Files Path
-  -n NUCBED, --nuc NUCBED
-                        Bed filename for Nucleosome Sequences
-  -l LINBED, --lin LINBED
-                        Bed filename for Linker Sequences
-  -fd FASDIR, --fdir FASDIR
-                        Output fasta file Path
-  -f FASNAME, --fas FASNAME
-                        Output fasta filename
+  -h, --help            show this help message and exit  
+  -p PATH, --path PATH  Bed Files Path  
+  -n NUCBED, --nuc NUCBED  
+                        Bed filename for Nucleosome Sequences  
+  -l LINBED, --lin LINBED  
+                        Bed filename for Linker Sequences  
+  -fd FASDIR, --fdir FASDIR  
+                        Output fasta file Path  
+  -f FASNAME, --fas FASNAME  
+                        Output fasta filename  
