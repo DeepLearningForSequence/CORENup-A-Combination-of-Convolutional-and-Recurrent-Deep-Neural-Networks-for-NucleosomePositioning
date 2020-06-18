@@ -14,8 +14,6 @@ This Script transform bed files, with nucleosome and linker position coordinates
 bed2fas.py [-h] [-p PATH] [-n NUCBED] [-l LINBED] [-fd FASDIR]
                   [-f FASNAME]
 
-```
-
 Arguments:
 
   -h, --help            show this help message and exit  
@@ -28,3 +26,6 @@ Arguments:
                         Output fasta file Path  
   -f FASNAME, --fas FASNAME  
                         Output fasta filename  
+
+```
+
