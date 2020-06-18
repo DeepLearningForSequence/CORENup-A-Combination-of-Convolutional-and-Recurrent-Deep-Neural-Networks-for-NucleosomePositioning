@@ -65,3 +65,79 @@ optional arguments:
 
 ```
 
+## Run CORENup
+
+### Experiment Script
+
+You can run experiment using 3 kind of model:
+1 The CORENup Architetture
+2 The Conv - LSTM part only
+3 The Conv - 2Conv part only
+
+Experiments use a k-fold cross validation method to evaluete models and save models and folds in the specified output directory
+
+
+```console
+
+python3 expRun.py [-h] [-m {1,2,3} [{1,2,3} ...]] [-p PATH] [-n NUCPICKLE]
+                 [-l LINKPICKLE] [-o OUTPATH] [-e EXP] [-nf NFOLDS]
+                 [-f FOLDNAME]
+
+Arguments:
+  -h, --help            show this help message and exit
+  -m {1,2,3} [{1,2,3} ...], --models {1,2,3} [{1,2,3} ...]
+                        NN Models name
+                        1 - CORENup NN
+                        2 - Conv - LSTM NN
+                        3 - Conv - 2Conv NN
+  -p PATH, --path PATH  Pickle file Path
+  -n NUCPICKLE, --nuc NUCPICKLE
+                        Nucleosome filename
+  -l LINKPICKLE, --lin LINKPICKLE
+                        Linker filename
+  -o OUTPATH, --out OUTPATH
+                        Output file Path
+  -e EXP, --experiments EXP
+                        Experiments Name
+  -nf NFOLDS, -nfolds NFOLDS
+                        Number of Folds
+  -f FOLDNAME, -foldName FOLDNAME
+                        Folds Filename
+
+
+```
+
+### Results Plot
+
+This script evaluate trained model using the following metrics:
+* Accuracy
+* Sensitivity
+* Specificity
+* MCC
+* AUC
+
+The metrics results bar plot was saved in the model file path with plot title name and png, svg and eps extension
+
+```console
+
+python3 plotExpResults.py [-h] [-m {1,2,3} [{1,2,3} ...]] [-pn PLOTNAME]
+                         [-p PATH] [-e EXP] [-nf NFOLDS] [-f FOLDNAME]
+
+Arguments:
+  -h, --help            show this help message and exit
+  -m {1,2,3} [{1,2,3} ...], --models {1,2,3} [{1,2,3} ...]
+                        NN Models name
+                        1 - CORENup NN
+                        2 - Conv - LSTM NN
+                        3 - Conv - 2Conv NN
+  -pn PLOTNAME, --plot PLOTNAME
+                        Plot Title
+  -p PATH, --path PATH  Model file Path
+  -e EXP, --experiments EXP
+                        Experiments Name
+  -nf NFOLDS, -nfolds NFOLDS
+                        Number of Folds
+  -f FOLDNAME, -foldName FOLDNAME
+                        Folds Filename
+
+```

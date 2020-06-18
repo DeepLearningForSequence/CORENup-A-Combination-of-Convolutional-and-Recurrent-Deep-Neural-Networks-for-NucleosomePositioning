@@ -17,7 +17,7 @@ parser.add_argument('-m', '--models', dest = 'modCodes', choices=[1,2,3], type=i
 parser.add_argument('-pn', '--plot', dest = 'plotName', type=str, default="Yeast Whole Genome",
                     help='Plot Title')
 parser.add_argument('-p','--path', dest='path', type=str, default="/home/amato/Scrivania/CORENup/Datasets/Setting2/Yeast/",
-                    help='Pickle file Path')
+                    help='Model file Path')
 parser.add_argument('-e', '--experiments', dest='exp' , default='Experiment1',
                     help='Experiments Name')
 parser.add_argument('-nf', '-nfolds', dest='nFolds', default=1,
