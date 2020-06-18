@@ -17,7 +17,7 @@ parser.add_argument('-l','--lin', dest='linBed', type=str, default="Yeast_wg_lin
 parser.add_argument('-fd','--fdir', dest='fasDir', type=str, default="/home/amato/Scrivania/CORENup/Datasets/Setting2/Yeast/fasta",
                     help='Output file Path')
 parser.add_argument('-f','--fas', dest='fasName', type=str, default="nucleosomes_vs_linkers_yeast_wg.fas",
-                    help='Output file Path')
+                    help='Output filename')
 
 args = parser.parse_args()
 inPath = args.path
